@@ -30,7 +30,7 @@ public class AirportController {
         //Largest airport is in terms of terminals. 3 terminal airport is larger than 2 terminal airport
         //Incase of a tie return the Lexicographically smallest airportName
         String name = airportService.getLargestAirport();
-       return null;
+       return name;
     }
 
     @GetMapping("/get-shortest-time-travel-between-cities")
