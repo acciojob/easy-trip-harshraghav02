@@ -61,7 +61,7 @@ public class AirportRepository {
             if(noOfTerminal >= max){
                 if(max == noOfTerminal){
                     int value = name.compareTo(airportName);
-                    if(value < 0) name = airportName;
+                    if(value > 0) name = airportName;
                 }
                 else {
                     max = noOfTerminal;
@@ -117,7 +117,7 @@ public class AirportRepository {
         if(!numberOfPassengers.contains(passengerId)){
             return "FAILURE";
         }
-        numberOfPassengers.remove(passengerId);
+        numberOfPassengers.remove(Integer.valueOf(passengerId));
         return "SUCCESS";
     }
 
